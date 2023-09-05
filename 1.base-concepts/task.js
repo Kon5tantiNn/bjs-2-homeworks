@@ -16,6 +16,18 @@ solveEquation(1,2,1)
 solveEquation(1,2,10)
 
 
-// function calculateTotalMortgage(percent, contribution, amount, countMonths) {
-  
-// }
+function calculateTotalMortgage(percent, contribution, amount, countMonths) {
+    let percentOfMonth = percent / 100 / 12;
+    let loanBody = amount - contribution;
+    let payment = loanBody * (percentOfMonth + percentOfMonth / ((1 + percentOfMonth) ** countMonths - 1));
+    let totalSum = payment * countMonths;
+    let roundTotalSum = Math.round(totalSum * 100) / 100;
+    return roundTotalSum;
+}
+
+calculateTotalMortgage(10,0,50000,12)
+calculateTotalMortgage(10,1000,50000,12)
+calculateTotalMortgage(10,0,20000,24)
+calculateTotalMortgage(10,1000,20000,24)
+calculateTotalMortgage(10,20000,20000,24)
+calculateTotalMortgage(10,0,10000,12)

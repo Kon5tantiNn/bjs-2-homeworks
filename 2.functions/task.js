@@ -14,12 +14,7 @@ function getArrayParams(...arr) {
 	}
 	let shortAvg = sum.toFixed(2)
 	let completeAvg = parseFloat(shortAvg)
-	let objCollector = {
-		min: min,
-		max: max,
-		avg: completeAvg
-	}
-	return console.log(objCollector);
+	return {min: min, max: max, avg: completeAvg};
 }
 getArrayParams(-99, 99, 10)
 getArrayParams(1, 2, 3, -100, 10)
@@ -30,7 +25,7 @@ function summElementsWorker(...arr) {
 	for (m = 0; m < arr.length; m += 1) {
 		sum += arr[m];
 	}
-	return console.log(sum)
+	return sum
 }
 summElementsWorker()
 summElementsWorker(10, 10, 11, 20, 10)
@@ -46,7 +41,7 @@ function differenceMaxMinWorker(...arr) {
 			minCollector = arr[m];
 		}
 	}
-	return console.log(maxCollector - minCollector)
+	return maxCollector - minCollector
 }
 differenceMaxMinWorker(0)
 differenceMaxMinWorker(10, 10, 11, 20, 10)
@@ -62,7 +57,7 @@ function differenceEvenOddWorker(...arr) {
       summOddKeeper += arr[m]
     }
   }
-  return console.log(summEvenKeeper - summOddKeeper)
+  return summEvenKeeper - summOddKeeper
 }
 differenceEvenOddWorker(94, 51, 57, 41, 47, 66, 58, 10, 38, 17)
 differenceEvenOddWorker(15, 97, 85, 64, 67, 10, 69, 40, 15, 35)
@@ -76,7 +71,7 @@ function averageEvenElementsWorker(...arr) {
        countEvenelements += 1
      }
    }
-   return console.log(evenCollector / countEvenelements)
+   return evenCollector / countEvenelements
 }
 averageEvenElementsWorker(1, 2, 3, 4, 5, 6, 7, 8, 9)
 averageEvenElementsWorker(15, 97, 85, 64, 67, 10, 69, 40, 15, 35)

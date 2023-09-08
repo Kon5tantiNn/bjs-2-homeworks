@@ -66,7 +66,10 @@ console.log(differenceEvenOddWorker(94, 51, 57, 41, 47, 66, 58, 10, 38, 17))
 console.log(differenceEvenOddWorker(15, 97, 85, 64, 67, 10, 69, 40, 15, 35))
 
 function averageEvenElementsWorker(...arr) {
-   let evenCollector = 0;
+  if(arr.length === 0){
+    return 0;
+  } 
+  let evenCollector = 0;
    let countEvenelements = 0;
    for (let m = 0; m < arr.length; m += 1){
      if(arr[m] % 2 === 0){
@@ -76,6 +79,7 @@ function averageEvenElementsWorker(...arr) {
    }
    return evenCollector / countEvenelements
 }
+console.log(averageEvenElementsWorker())
 console.log(averageEvenElementsWorker(1, 2, 3, 4, 5, 6, 7, 8, 9))
 console.log(averageEvenElementsWorker(15, 97, 85, 64, 67, 10, 69, 40, 15, 35))
 

@@ -33,8 +33,8 @@ console.log(summElementsWorker(10, 10, 11, 20, 10))
 function differenceMaxMinWorker(...arr) {
 	if(arr.length === 0){
     return 0;
-  }
-  let maxCollector = -Infinity;
+    }
+    let maxCollector = -Infinity;
 	let minCollector = Infinity;
 	for (let m = 0; m < arr.length; m += 1) {
 		if (arr[m] > maxCollector) {
@@ -70,14 +70,14 @@ function averageEvenElementsWorker(...arr) {
     return 0;
   } 
   let evenCollector = 0; 
-   let countEvenelements = 0;
-   for (let m = 0; m < arr.length; m += 1){
+  let countEvenelements = 0;
+  for (let m = 0; m < arr.length; m += 1){
      if(arr[m] % 2 === 0){
        evenCollector += arr[m]
        countEvenelements += 1
      }
    }
-   return evenCollector / countEvenelements
+  return evenCollector / countEvenelements
 }
 console.log(averageEvenElementsWorker())
 console.log(averageEvenElementsWorker(1, 2, 3, 4, 5, 6, 7, 8, 9))

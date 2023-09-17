@@ -1,11 +1,12 @@
 function compareArrays(arr1, arr2) {
-    if(arr1.length === arr2.length){
-    let compFn = arr1.every((el, i) => el === arr2[i]);
-    return compFn;
-    } else {
-    return false
-    }
+	if (arr1.length === arr2.length) {
+		let compFn = arr1.every((el, i) => el === arr2[i]);
+		return console.log(compFn)
+	} else {
+		return console.log(false)
+	}
 }
+
 compareArrays([1, 2, 3], [1, 2, 3])
 compareArrays([1, 2], [1, 2, 3])
 compareArrays([1, 2, 3], [3, 2, 1])
@@ -31,12 +32,12 @@ const people = [
     {firstName: "Евгений", secondName: "Кузьмин", age: 19, gender: "мужской"},
   ]
 
-function getUsersNamesInAgeRange(users, gender) {
-  let result = users.filter(currentGender => currentGender.gender === gender)
-  if (result.length === 0) {
-    return 0;
-  }
-  return result.map(get => get.age).reduce((counter, item) => counter + item) / result.length
+  function getUsersNamesInAgeRange(users, gender) {
+	let result = users.filter(currentGender => currentGender.gender === gender)
+	if (result.length === 0) {
+		return 0;
+	}
+	return result.map(get => get.age).reduce((counter, item) => counter + item) / result.length
 }
 
 console.log(getUsersNamesInAgeRange(people, "мужской"))

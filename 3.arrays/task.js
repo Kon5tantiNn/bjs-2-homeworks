@@ -1,9 +1,10 @@
 function compareArrays(arr1, arr2) {
-    const compFn = arr1.every((el, i) => el === arr2[i]);
-    if (arr1.length !== arr2.length){
-        return false;
+    if(arr1.length === arr2.length){
+    let compFn = arr1.every((el, i) => el === arr2[i]);
+    return compFn;
+    } else {
+    return false
     }
-    return console.log(compFn);
 }
 compareArrays([1, 2, 3], [1, 2, 3])
 compareArrays([1, 2], [1, 2, 3])

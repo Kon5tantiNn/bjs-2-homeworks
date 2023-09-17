@@ -1,18 +1,18 @@
-function compareArrays(arr1, arr2) {
+  function compareArrays(arr1, arr2) {
 	if (arr1.length === arr2.length) {
 		let compFn = arr1.every((el, i) => el === arr2[i]);
-		return console.log(compFn)
+		return console.log(compFn);
 	} else {
-		return console.log(false)
+		return console.log(false);
 	}
 }
 
-compareArrays([1, 2, 3], [1, 2, 3])
-compareArrays([1, 2], [1, 2, 3])
-compareArrays([1, 2, 3], [3, 2, 1])
-compareArrays([0, 1, 2], [0, 1])
-compareArrays([0, 1], [0, 1, 2])
-compareArrays([8, 9, 5, 4], [8, 9, 5, 4, 8, 3, 5])
+compareArrays([1, 2, 3], [1, 2, 3]);
+compareArrays([1, 2], [1, 2, 3]);
+compareArrays([1, 2, 3], [3, 2, 1]);
+compareArrays([0, 1, 2], [0, 1]);
+compareArrays([0, 1], [0, 1, 2]);
+compareArrays([8, 9, 5, 4], [8, 9, 5, 4, 8, 3, 5]);
 
 
 const people = [
@@ -40,7 +40,7 @@ const people = [
 	return result.map(get => get.age).reduce((counter, item) => counter + item) / result.length
 }
 
-console.log(getUsersNamesInAgeRange(people, "мужской"))
-console.log(getUsersNamesInAgeRange(people, "женский"))
-console.log(getUsersNamesInAgeRange([], "женский"))
-console.log(getUsersNamesInAgeRange(people, "Камбердикт Бембербетч"))
+console.log(getUsersNamesInAgeRange(people, "мужской"));
+console.log(getUsersNamesInAgeRange(people, "женский"));
+console.log(getUsersNamesInAgeRange([], "женский"));
+console.log(getUsersNamesInAgeRange(people, "инопланетянин"));

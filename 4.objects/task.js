@@ -11,7 +11,7 @@ Student.prototype.setSubject = function (subjectName) {
 
 Student.prototype.addMarks = function (...marks) {
     if(!this.hasOwnProperty("marks")){
-       return false
+       return null
     }
     this.marks.push(...marks)
 }
@@ -26,7 +26,7 @@ Student.prototype.getAverage = function () {
 Student.prototype.exclude = function (reason) {
     delete this.subject
     delete this.marks
-    this.exclude = reason
+    this.excluded = reason
 }
 
 let student1 = new Student("Василиса", "женский", 19)
@@ -38,7 +38,9 @@ console.log(student1.getAverage())
 console.log(student1)
 let student2 = new Student("Артём", "мужской", 25)
 student2.setSubject("Geometry")
-student2.exclude("плохая учеба")
+student2.exclude("прогулы")
 console.log(student2)
-student2.addMarks(3,4,5,3,4)
-console.log(student2.marks)
+student2.addMarks(4,3,5,4,5)
+console.log(student2)
+student1.exclude("опоздания")
+console.log(student1)

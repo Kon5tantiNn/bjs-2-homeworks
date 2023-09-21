@@ -11,7 +11,7 @@ Student.prototype.setSubject = function (subjectName) {
 
 Student.prototype.addMarks = function (...marks) {
     if(!this.hasOwnProperty("marks")){
-        this.marks = [];
+       return false
     }
     this.marks.push(...marks)
 }
@@ -40,3 +40,5 @@ let student2 = new Student("Артём", "мужской", 25)
 student2.setSubject("Geometry")
 student2.exclude("плохая учеба")
 console.log(student2)
+student2.addMarks(3,4,5,3,4)
+console.log(student2.marks)

@@ -74,15 +74,10 @@ const detective1 = new DetectiveBook("Снеговик", "23,03,2018,", 427, "Ю
 const fantastic1 = new FantasticBook("Solaris", "23.05.1970", 377, "Stanislaw Lem")
 
 
-console.log(magazine1)
-console.log(novelBook1)
-console.log(detective1)
-console.log(book3)
+
 
 fantastic1.setNewState = 32
-
 fantastic1.fix()
 fantastic1.fix()
-fantastic1.fix()
-fantastic1.fix()
-console.log(fantastic1)
+console.log(fantastic1.showstate)
+console.log(fantastic1.state)

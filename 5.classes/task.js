@@ -1,10 +1,10 @@
 class PrintEditionItem{
-    constructor(name, releaseDate, pagesCount, state = 100, type) {
+    constructor(name, releaseDate, pagesCount, state = 100, type = null) {
         this.name = name;
         this.releaseDate = releaseDate;
         this.pagesCount = pagesCount;
         this.state = state
-        this.type = null;
+        this.type = type;
     }
     fix(){
         this.state *= 1.5;
@@ -23,7 +23,9 @@ class PrintEditionItem{
         }
     }
     get showstate() {
+        if(this.state){
         return this.state
+        }
     }
 }
 
@@ -81,3 +83,5 @@ fantastic1.fix()
 fantastic1.fix()
 console.log(fantastic1.showstate)
 console.log(fantastic1.state)
+console.log(detective1)
+console.log(novelBook1)

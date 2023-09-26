@@ -100,3 +100,20 @@ novelBook1.fix()
 novelBook1.fix()
 console.log(novelBook1)
 console.log(detective1)
+
+class Library{
+    constructor(name){
+        this.name = name;
+        this.books = [];
+    }
+    addBook(book){
+        if(book.showstate > 30){
+        this.books.push(book)
+        }
+    }
+}
+
+const classicLibrary = new Library("Библиотека классической литературы 20 века")
+classicLibrary.addBook(new NovelBook("Над пропастью во ржи", "12.03.1978", 300, "Джером Дэвид Сэлинджер"))
+console.log(classicLibrary.books)
+

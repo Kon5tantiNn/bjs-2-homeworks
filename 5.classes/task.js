@@ -47,7 +47,7 @@ class NovelBook extends Book {
     constructor(name, releaseDate, pagesCount, author) {
         super(name, releaseDate, pagesCount)    
             this.type = "novel"
-            this.author = author
+            this.author = author;
             this.state = 100;
     }
 }
@@ -56,7 +56,7 @@ class FantasticBook extends Book {
     constructor(name, releaseDate, pagesCount, author) {
         super(name, releaseDate, pagesCount);
             this.type = "sci-fi"
-            this.author = author
+            this.author = author;
             this.state = 100;
     }
 }
@@ -65,7 +65,7 @@ class DetectiveBook extends Book {
     constructor(name, releaseDate, pagesCount, author) {
         super(name, releaseDate, pagesCount)
             this.type = "detective"
-            this.author = author
+            this.author = author;
             this.state = 100;
     }
 }

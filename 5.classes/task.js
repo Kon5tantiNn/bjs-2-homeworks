@@ -111,7 +111,7 @@ class Library{
         this.books.push(book)
         }
     }
-    findBook(type, value){
+    findBookBy(type, value){
         return this.books.find(book => book[type] === value) || null
     }    
 }
@@ -121,4 +121,4 @@ const classicLibrary = new Library("Библиотека классическо�
 classicLibrary.addBook(new NovelBook("Над пропастью во ржи", "12.03.1978", 300, "Джером Дэвид Сэлинджер"))
 classicLibrary.addBook(new Magazine("Огонек", "20.07.1988", 30))
 console.log(classicLibrary.books)
-console.log(classicLibrary.findBook("name", "Огонк"))
+console.log(classicLibrary.findBookBy("name", "Огонек"))

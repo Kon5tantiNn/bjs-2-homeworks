@@ -111,6 +111,9 @@ class Library{
         this.books.push(book)
         }
     }
+    findBook(type, value){
+        this.books.find(book => book[type] === value)    
+    }
 }
 
 const classicLibrary = new Library("Библиотека классической литературы 20 века")

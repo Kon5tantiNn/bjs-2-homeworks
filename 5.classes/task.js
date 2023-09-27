@@ -115,5 +115,6 @@ class Library{
 
 const classicLibrary = new Library("Библиотека классической литературы 20 века")
 classicLibrary.addBook(new NovelBook("Над пропастью во ржи", "12.03.1978", 300, "Джером Дэвид Сэлинджер"))
+classicLibrary.addBook(new Magazine("Огонек", "20.07.1988", 30))
 console.log(classicLibrary.books)
 

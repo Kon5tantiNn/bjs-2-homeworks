@@ -115,8 +115,13 @@ class Library{
         return this.books.find(book => book[type] === value) || null
     }
     giveBookByName(bookName){
-      const bookToGive = this.books.find(givenbook => givenbook.name === bookName) || null
-        return bookToGive
+      const indexOfBook = this.books.findIndex(book => book.name === bookName)
+        if(indexOfBook !== -1){
+            const foundBook = this.books[indexOfBook]
+            delete this.books[indexOfBook]
+            return foundBook
+        }
+        return null
     }    
 }
 
@@ -126,6 +131,7 @@ classicLibrary.addBook(new NovelBook("Над пропастью во ржи", "1
 classicLibrary.addBook(new Magazine("Огонек", "20.07.1988", 30))
 console.log(classicLibrary.findBookBy("name", "Над пропастью во ржи"))
 console.log(classicLibrary.giveBookByName("Над пропастью во ржи"))
+console.log(classicLibrary)
 
 
 

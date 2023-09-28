@@ -108,7 +108,7 @@ class Library{
     }
     addBook(book){
         if(book.showstate > 30){
-        this.books.push(book)
+        this.books.push(book);
         }
     }
     findBookBy(type, value){
@@ -117,21 +117,21 @@ class Library{
     giveBookByName(bookName){
       const indexOfBook = this.books.findIndex(book => book.name === bookName)
         if(indexOfBook !== -1){
-            const foundBook = this.books[indexOfBook]
-            delete this.books[indexOfBook]
-            return foundBook
+            const foundBook = this.books[indexOfBook];
+            delete this.books[indexOfBook];
+            return foundBook;
         }
         return null
     }    
 }
 
 
-const classicLibrary = new Library("Библиотека классической литературы 20 века")
-classicLibrary.addBook(new NovelBook("Над пропастью во ржи", "12.03.1978", 300, "Джером Дэвид Сэлинджер"))
-classicLibrary.addBook(new Magazine("Огонек", "20.07.1988", 30))
-console.log(classicLibrary.findBookBy("name", "Над пропастью во ржи"))
-console.log(classicLibrary.giveBookByName("Над пропастью во ржи"))
-console.log(classicLibrary)
+const classicLibrary = new Library("Библиотека классической литературы 20 века");
+classicLibrary.addBook(new NovelBook("Над пропастью во ржи", "12.03.1978", 300, "Джером Дэвид Сэлинджер"));
+classicLibrary.addBook(new Magazine("Огонек", "20.07.1988", 30));
+console.log(classicLibrary.findBookBy("name", "Над пропастью во ржи"));
+console.log(classicLibrary.giveBookByName("На пропастью во ржи"));
+
 
 
 

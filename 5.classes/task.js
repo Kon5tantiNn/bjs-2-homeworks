@@ -118,7 +118,7 @@ class Library{
       const indexOfBook = this.books.findIndex(book => book.name === bookName)
         if(indexOfBook !== -1){
             const foundBook = this.books[indexOfBook];
-            delete this.books[indexOfBook];
+            this.books.splice(indexOfBook, 1);
             return foundBook;
         }
         return null
@@ -130,7 +130,8 @@ const classicLibrary = new Library("Библиотека классическо�
 classicLibrary.addBook(new NovelBook("Над пропастью во ржи", "12.03.1978", 300, "Джером Дэвид Сэлинджер"));
 classicLibrary.addBook(new Magazine("Огонек", "20.07.1988", 30));
 console.log(classicLibrary.findBookBy("name", "Над пропастью во ржи"));
-console.log(classicLibrary.giveBookByName("На пропастью во ржи"));
+console.log(classicLibrary.giveBookByName("Над пропастью во ржи"));
+console.log(classicLibrary)
 
 
 
